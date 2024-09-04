@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Carousel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Prototype de Carousel -->
+    <div class="carousel">
+        <figure id="spinner">
+            <!-- Carte 1 -->
+            <div class="flip-card no1">
+                <div class="inner-flip">
+                    <div class="front-flip">
+                        <img src="https://via.placeholder.com/150" alt="Image 1" class="image">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>Carte Ici!</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, aliquid magni dolorum, itaque, quaerat distinctio repudiandae culpa tempore enim harum ipsa aut nostrum laboriosam mollitia quia.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Carte 2 -->
+            <div class="flip-card no2">
+                <div class="inner-flip">
+                    <div class="front-flip">
+                        <img src="https://via.placeholder.com/150" alt="Image 2" class="image">
+                </div>
+                <div class="flip-card-back">
+                    <h1>Carte Ici!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, aliquid magni dolorum, itaque, quaerat distinctio repudiandae culpa tempore enim harum ipsa aut nostrum laboriosam mollitia quia.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Carte 3 -->
+        <div class="flip-card no3">
+            <div class="inner-flip">
+                <div class="front-flip">
+                    <img src="https://via.placeholder.com/150" alt="Image 3" class="image">
+                </div>
+                <div class="flip-card-back">
+                    <h1>Carte Ici!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, aliquid magni dolorum, itaque, quaerat distinctio repudiandae culpa tempore enim harum ipsa aut nostrum laboriosam mollitia quia.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 4 -->
+        <div class="flip-card no4">
+            <div class="inner-flip">
+                <div class="front-flip">
+                    <img src="https://via.placeholder.com/150" alt="Image 4" class="image">
+                </div>
+                <div class="flip-card-back">
+                    <h1>Carte Ici!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, aliquid magni dolorum, itaque, quaerat distinctio repudiandae culpa tempore enim harum ipsa aut nostrum laboriosam mollitia quia.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Carte 5 -->
+        <div class="flip-card no5">
+            <div class="inner-flip">
+                <div class="front-flip">
+                    <img src="https://via.placeholder.com/150" alt="Image 5" class="image">
+                </div>
+                <div class="flip-card-back">
+                    <h1>Carte Ici!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, aliquid magni dolorum, itaque, quaerat distinctio repudiandae culpa tempore enim harum ipsa aut nostrum laboriosam mollitia quia.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 6 -->
+        <div class="flip-card no6">
+            <div class="inner-flip">
+                <div class="front-flip">
+                    <img src="https://via.placeholder.com/150" alt="Image 6" class="image">
+                </div>
+                <div class="flip-card-back">
+                    <h1>Carte Ici!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, aliquid magni dolorum, itaque, quaerat distinctio repudiandae culpa tempore enim harum ipsa aut nostrum laboriosam mollitia quia.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 7 -->
+        <div class="flip-card no7">
+            <div class="inner-flip">
+                <div class="front-flip">
+                    <img src="https://via.placeholder.com/150" alt="Image 7" class="image">
+                </div>
+                <div class="flip-card-back">
+                    <h1>Carte Ici!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, aliquid magni dolorum, itaque, quaerat distinctio repudiandae culpa tempore enim harum ipsa aut nostrum laboriosam mollitia quia.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 8 -->
+        <div class="flip-card no8">
+            <div class="inner-flip">
+                <div class="front-flip">
+                    <img src="https://via.placeholder.com/150" alt="Image 8" class="image">
+                </div>
+                <div class="flip-card-back">
+                    <h1>Carte Ici!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, aliquid magni dolorum, itaque, quaerat distinctio repudiandae culpa tempore enim harum ipsa aut nostrum laboriosam mollitia quia.</p>
+                </div>
+            </div>
+        </div>
+        </figure>
+    </div>
+
+    <nav id="boutons">
+        <!-- Boutons -->
+        <button class="prev">Prev</button>
+        <button class="next">Next</button>
+    </nav>
+</body>
+
+<!-- JS -->
+<script>
+    /*======================================
+     * Controle de la rotation du carousel *
+     ======================================*/
+    let carousel = document.querySelector('.carousel'); // Le carousel au complet
+    let cartes = document.querySelectorAll('.flip-card'); // Les cartes du carousel
+    const nextButton = document.querySelector('.next'); // Le bouton suivant
+    const prevButton = document.querySelector('.prev'); // Le bouton précédent
+    let currentAngle = 0; // L'angle de rotation initial des cartes
+
+    // Si on clique sur le bouton suivant...
+    nextButton.addEventListener('click', () => {
+        // L'angle de rotation des cartes change en augmnentant de 45 degrés (selon le calcul en commentaire en ligne 100 du CSS)
+        currentAngle += 45; 
+        updateImages();
+    });
+
+    // Si on clique sur le bouton précédent...
+    prevButton.addEventListener('click', () => {
+        // L'angle de rotation des cartes change en baissant de 45 degrés (selon le calcul en commentaire en ligne 100 du CSS)
+        currentAngle -= 45; 
+        updateImages();
+    });
+
+    function updateImages() {
+        cartes.forEach((carte, index) => {
+        carte.style.transform = `rotateY(${(index * 45) + currentAngle}deg) translateZ(253px)`;
+    });
+    }
+
+    /*============================= 
+    * Contrôle du flip des cartes * 
+    ==============================*/
+    let front = document.querySelectorAll('.front-flip'); // Le devant des cartes
+    let inner = document.querySelectorAll('.inner-flip'); // Le positionnement de l'avant et de l'arrière des cartes 
+    let back = document.querySelectorAll('.flip-card-back'); // Le dos des cartes
+
+    // Pour chaque carte...
+    inner.forEach((carte, index) => {
+        // L'état "flipped" est faux
+        let isFlipped = false;
+
+    // Si la carte est cliquée...
+    carte.addEventListener('click', () => {
+        // L'état retourné de la carte
+        if (!isFlipped) 
+        {
+            // La carte fait une rotation de 180 degrés et est agrandie de 0.2
+            carte.style.transform = 'rotateY(180deg) scale(1.2)';
+            // L'état "flipped" est vrai
+            isFlipped = true;
+        } 
+        // L'état initial de la carte
+        else
+        {
+            // La carte revient à sa position initiale (on enlève tout changement JS au style)
+            carte.style.transform = '';
+            // L'état "flipped" est faux
+            isFlipped = false;
+        }
+    });
+});            
+</script>
+</html>
