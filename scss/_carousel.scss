@@ -1,0 +1,160 @@
+/* Le Carousel */
+.carousel {
+    width: 100%;
+    height: 100vh;
+    perspective: 1000px;
+    transform-origin: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 7rem;
+    z-index: 1000; //Temporaire
+
+    h2 {
+        margin: 0 0 0 0;
+        align-self: flex-start;
+    }
+
+    p {
+        padding-bottom: 0;
+    }
+}
+
+/* Conteneur des cartes */
+#spinner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+
+    @media screen and (min-width: $Fullscreen) {
+        transform: scale(1.5);  
+    }
+}
+
+/* Conteneur des boutons */
+#boutons {
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+  #boutons .prev {
+    position: relative;
+    left: -150%;
+    bottom: 15rem;
+    z-index: 5;
+  }
+  #boutons .next {
+    position: relative;
+    left: 150%;
+    bottom: 15rem;
+    z-index: 5;
+  }
+
+/* Les cartes */
+.flip-card {
+    position: absolute;
+    width: 190px;
+    height: 120px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transform: rotateY(45deg);
+    transition: transform 1s;
+
+    h1 {
+        font-size: 30px;
+        text-shadow: 0.3vw 0.3vw 0px rgb(255, 151, 194),0.6vw 0.6vw 0px #a70a4ba9, 
+        -0.3vw -0.3vw 0px #00bc87b2, -20px 15px 15px #08092ad8;
+
+        @media screen and (min-width: $Fullscreen) {
+            text-shadow: 0.1vw 0vw 0px rgb(255, 151, 194), 0.1vw 0.1vw 0px rgba(167, 10, 75, 0.662745098), 
+            -0.05vw -0.1vw 0px rgba(0, 188, 135, 0.6980392157), -5px 15px 15px rgba(8, 9, 42, 0.8470588235);
+        }
+    }
+
+    p {
+        width: 100%;
+        font-size: 12px;
+        margin: 0;
+    }
+}
+
+/* Positionnement de l'avant et arrière des cartes */
+.inner-flip {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+/* Hover sur la carte */
+ .flip-card:hover .inner-flip {
+    transform: scale(1.2);
+    cursor: pointer;
+  } 
+
+/* Le devant et l'arrière des cartes */
+.front-flip, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    transition: transform 1s;
+}
+
+/* Le dos de la carte */
+.flip-card-back {
+    width: 150px;
+    height: 150px;
+    background-color: skyblue;
+    transform: rotateY(180deg) translateX(-20px);
+}
+
+/* Le devant est visible dans l'état normal */
+.front-flip {
+    backface-visibility: visible;
+}
+
+/* L'arrière est invisible dans l'état normal (caché derrière le devant) */
+.flip-card-back {
+    backface-visibility: hidden;
+}
+
+  /* Pour debugger (voir une des images tourner pour s'assurer que la rotation soit bonne) */
+  .carousel .no1 .image:nth-child(1) {
+    border: 3px solid blue;
+}
+
+
+/* 
+    Calcul pour obtenir la moitié du rectangle en face de l'usager, le milieu est l'endroit où l'image s'arrête après un click :
+
+    1- rotation Y = 360deg / 8 images --> [45deg] (angle d'un triangle de l'octogone) 
+    2- translate Z = 45deg / 2 (séparation d'un triangle en 2 pour obtenir l'angle des 2 triangles rectangles obtenus)--> [22.5deg]
+    3- width = 210px (largeur d'un panneau de l'octogone) / 2 --> [105px] 
+    4- tan(22.5deg) = 105px/ r ("rayon" qui part du centre de l'octogone et se rend au panneau faisant face à l'utilisateur) -->
+       r = 105px/22.5tan = 253px
+
+    Références: https://www.sitepoint.com/building-3d-rotating-carousel-css-javascript/ 
+                https://3dtransforms.desandro.com/carousel
+*/
+
+.flip-card.no1 {transform: rotateY(0deg) translateZ(253px);}
+.flip-card.no2 {transform: rotateY(45deg) translateZ(253px);}
+.flip-card.no3 {transform: rotateY(90deg) translateZ(253px);}
+.flip-card.no4 {transform: rotateY(135deg) translateZ(253px);}
+.flip-card.no5 {transform: rotateY(180deg) translateZ(253px);}
+.flip-card.no6 {transform: rotateY(225deg) translateZ(253px);}
+.flip-card.no7 {transform: rotateY(270deg) translateZ(253px);}
+.flip-card.no8 {transform: rotateY(315deg) translateZ(253px);}
