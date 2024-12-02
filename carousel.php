@@ -47,7 +47,13 @@ add_action('wp_enqueue_scripts', 'enqueue_style_script');
 // Genere le code html du carrousel
 function genere_HTML()
 {
+    // Debugging statement
+    error_log('genere_HTML function called');
+    
     $html = '
+    <h2>Projets en vedette</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae rerum dignissimos aliquam dolores pariatur voluptatem voluptates ea odit est quaerat similique ullam nam, maxime id corrupti? Quidem id tempore laboriosam.</p>
+    
         <!-- Prototype de Carousel -->
         <div class="carousel">
             <figure id="spinner">

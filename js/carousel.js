@@ -65,41 +65,41 @@
   * La forme suit la souris en 3D (comme une carte qui bouge sur un plan 3D) *
  =============================================================================*/
 // On detecte quelle carte est devant l'utilisateur
-let card = document.querySelector('.flip-card'); // Les cartes
-let cardRect = card.getBoundingClientRect();
+// let card = document.querySelector('.flip-card'); // Les cartes
+// let cardRect = card.getBoundingClientRect();
 
-// On detecte la position initiale de la carte
-let cardX = cardRect.left + cardRect.width / 2;
-let cardY = cardRect.top + cardRect.height / 2;
+// // On detecte la position initiale de la carte
+// let cardX = cardRect.left + cardRect.width / 2;
+// let cardY = cardRect.top + cardRect.height / 2;
 
-// On detecte la position de la souris quand elle entre dans la carte
-card.addEventListener('mouseenter', () => {
-    cardRect = card.getBoundingClientRect();
-    cardX = cardRect.left + cardRect.width / 2;
-    cardY = cardRect.top + cardRect.height / 2;
-});
+// // On detecte la position de la souris quand elle entre dans la carte
+// card.addEventListener('mouseenter', () => {
+//     cardRect = card.getBoundingClientRect();
+//     cardX = cardRect.left + cardRect.width / 2;
+//     cardY = cardRect.top + cardRect.height / 2;
+// });
 
-// On detecte la position de la souris quand elle bouge sur la carte
-card.addEventListener('mousemove', (e) => {
-    // On calcule la position de la souris
-    let mouseX = e.clientX;
-    let mouseY = e.clientY;
+// // On detecte la position de la souris quand elle bouge sur la carte
+// card.addEventListener('mousemove', (e) => {
+//     // On calcule la position de la souris
+//     let mouseX = e.clientX;
+//     let mouseY = e.clientY;
 
-    // On calcule la distance entre la souris et la carte
-    let diffX = mouseX - cardX;
-    let diffY = mouseY - cardY;
+//     // On calcule la distance entre la souris et la carte
+//     let diffX = mouseX - cardX;
+//     let diffY = mouseY - cardY;
 
-    // On calcule l'angle de rotation de la carte
-    let angleX = diffY / 10;
-    let angleY = diffX / 10;
+//     // On calcule l'angle de rotation de la carte
+//     let angleX = diffY / 10;
+//     let angleY = diffX / 10;
 
-    // On applique la rotation à la carte
-    card.style.transform = `rotateX(${-angleX}deg) rotateY(${angleY}deg) scale(1.2)`;
-});
+//     // On applique la rotation à la carte
+//     card.style.transform = `rotateX(${-angleX}deg) rotateY(${angleY}deg) scale(1.2)`;
+// });
 
-// On remet la carte à sa position initiale quand la souris quitte la carte
-card.addEventListener('mouseleave', () => {
-    card.style.transform = 'rotateX(0deg) rotateY(0deg) translateZ(253px) scale(1.2)';
-});
+// // On remet la carte à sa position initiale quand la souris quitte la carte
+// card.addEventListener('mouseleave', () => {
+//     card.style.transform = 'rotateX(0deg) rotateY(0deg) translateZ(253px) scale(1.2)';
+// });
 
 
