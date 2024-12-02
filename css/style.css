@@ -118,8 +118,12 @@
 
 /* Le dos de la carte */
 .flip-card-back {
-  width: 150px;
+  width: 100%;
   height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: -1.25rem;
   background-color: skyblue;
   transform: rotateY(180deg) translateX(-20px);
 }
@@ -134,9 +138,12 @@
   backface-visibility: hidden;
 }
 
-/* Pour debugger (voir une des images tourner pour s'assurer que la rotation soit bonne) */
-.carousel .no1 .image:nth-child(1) {
-  border: 3px solid blue;
+.flip-card-back h1 {
+  font-size: 1.25rem;
+}
+
+.carousel .image {
+  width: 100%;
 }
 
 /* 

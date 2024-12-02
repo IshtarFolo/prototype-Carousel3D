@@ -10,14 +10,14 @@
      // Si on clique sur le bouton suivant...
      nextButton.addEventListener('click', () => {
          // L'angle de rotation des cartes change en augmnentant de 45 degrés (selon le calcul en commentaire en ligne 100 du CSS)
-         currentAngle += 45; 
+         currentAngle -= 45; 
          updateImages();
      });
  
      // Si on clique sur le bouton précédent...
      prevButton.addEventListener('click', () => {
          // L'angle de rotation des cartes change en baissant de 45 degrés (selon le calcul en commentaire en ligne 100 du CSS)
-         currentAngle -= 45; 
+         currentAngle += 45; 
          updateImages();
      });
  
