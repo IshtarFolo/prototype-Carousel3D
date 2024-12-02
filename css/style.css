@@ -57,15 +57,37 @@
 #boutons .prev {
   position: relative;
   left: -150%;
-  bottom: 15rem;
+  bottom: 20rem;
   z-index: 5;
+  filter: drop-shadow(0 0 1rem yellowgreen);
+  border-radius: 50px;
+}
+#boutons .prev:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0.6;
+  box-shadow: 0 0 1em 0.5em yellowgreen;
 }
 
 #boutons .next {
   position: relative;
   left: 150%;
-  bottom: 15rem;
+  bottom: 20rem;
   z-index: 5;
+  filter: drop-shadow(0 0 1rem yellowgreen);
+  border-radius: 50px;
+}
+#boutons .next:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0.6;
+  box-shadow: 0 0 1em 0.5em yellowgreen;
 }
 
 /* Les cartes */
@@ -156,6 +178,7 @@
 
 .nonClickable {
   pointer-events: none;
+  scale: 1;
 }
 
 /* 
