@@ -134,9 +134,8 @@
   backface-visibility: hidden;
 }
 
-/* Pour debugger (voir une des images tourner pour s'assurer que la rotation soit bonne) */
-.carousel .no1 .image:nth-child(1) {
-  border: 3px solid blue;
+.carousel .image {
+  width: 100%;
 }
 
 /* 
