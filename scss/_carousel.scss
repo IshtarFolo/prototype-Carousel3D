@@ -1,7 +1,6 @@
 /* Le Carousel */
 .carousel {
     width: 100%;
-    height: 100vh;
     perspective: 1000px;
     transform-origin: 50% 50%;
     display: flex;
@@ -10,6 +9,11 @@
     flex-direction: column;
     padding-bottom: 7rem;
     z-index: 1000; //Temporaire
+    scale: 1.3;
+
+    @media screen and (min-width: $Fullscreen) {
+        scale: 1.5;
+    }
 
     h2 {
         margin: 0 0 0 0;
@@ -116,13 +120,12 @@
 /* Le dos de la carte */
 .flip-card-back {
     width: 100%;
-    height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     left: -1.25rem;
 
-    background-color: skyblue;
+    background-color: black;
     transform: rotateY(180deg) translateX(-20px);
 }
 
@@ -140,8 +143,16 @@
     font-size: 1.25rem;
 }
 
+.flip-card-back p {
+    font-size: 0.4rem;
+}
+
 .carousel .image {
     width: 100%;
+}
+
+.nonClickable {
+    pointer-events: none;
 }
 
 

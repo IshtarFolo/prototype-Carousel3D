@@ -47,13 +47,10 @@ add_action('wp_enqueue_scripts', 'enqueue_style_script');
 // Genere le code html du carrousel
 function genere_HTML()
 {
-    // Debugging statement
+	// Debugging statement
     error_log('genere_HTML function called');
-    
+	
     $html = '
-    <h2>Projets en vedette</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae rerum dignissimos aliquam dolores pariatur voluptatem voluptates ea odit est quaerat similique ullam nam, maxime id corrupti? Quidem id tempore laboriosam.</p>
-    
         <!-- Prototype de Carousel -->
         <div class="carousel">
             <figure id="spinner">
@@ -61,11 +58,11 @@ function genere_HTML()
                 <div class="flip-card no1">
                     <div class="inner-flip">
                         <div class="front-flip">
-                            <img src="https://via.placeholder.com/150" alt="Image 1" class="image">
+                            <img src="https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/NeedTwoSurviveImg1.png" alt="NeedTwoSurvive" class="image">
                         </div>
                         <div class="flip-card-back">
-                            <h1>Carte Ici!</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ...</p>
+                            <h1>NeedTwoSurvive!</h1>
+                            <p>Need Two Survive est un jeu d&#39;horreur créé avec Unity 3D, conçu en équipe dans le cadre du cours de &quot;Création de jeu en équipe&quot;. Le jeu mélange habilement horreur et humour, créant un contraste où la tension est parfois relâchée avant d’être brutalement augmentée par des scènes de gore choquantes. Ce jeu coopératif à ...<a href="https://gftnth00.mywhc.ca/tim17/need-two-survive/" class="read-more">Lire la suite</a></p>
                         </div>
                     </div>
                 </div>
@@ -73,11 +70,11 @@ function genere_HTML()
                 <div class="flip-card no2">
                     <div class="inner-flip">
                         <div class="front-flip">
-                            <img src="https://via.placeholder.com/150" alt="Image 2" class="image">
+                            <img src="https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/TriptyqueImg1.png" alt="Triptyque" class="image">
                     </div>
                     <div class="flip-card-back">
-                        <h1>Carte Ici!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ...</p>
+                        <h1>Triptyque</h1>
+                        <p>Triptyque est un projet réalisé dans le cadre du cours d&#39;animation 3D, axé sur la création de personnages optimisés pour un jeu vidéo, à l&#39;aide du logiciel Autodesk Maya. L&#39;objectif était de modéliser des personnages en respectant des contraintes de résolutions et de polygones, afin d&#39;obtenir la plus haute fidélité graphique tout en garantissant des performances ... <a href="https://gftnth00.mywhc.ca/tim17/triptyque/" class="read-more">Lire la suite</a></p>
                     </div>
                 </div>
             </div>
@@ -85,11 +82,11 @@ function genere_HTML()
             <div class="flip-card no3">
                 <div class="inner-flip">
                     <div class="front-flip">
-                        <img src="https://via.placeholder.com/150" alt="Image 3" class="image">
+                        <img src="https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/GraviteImg1.png" alt="Gravite" class="image">
                     </div>
                     <div class="flip-card-back">
-                        <h1>Carte Ici!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ...</p>
+                        <h1>Gravité</h1>
+                        <p>Le projet est un jeu 2D développé dans le cadre du cours &quot;Création de jeu 2D&quot;, inspiré du célèbre jeu Portal. L&#39;objectif principal est de résoudre divers puzzles en contrôlant la direction de la gravité, ce qui permet de manipuler l&#39;environnement et d&#39;interagir avec les objets de manière unique pour progresser. Le jeu repose largement ...<a href="https://gftnth00.mywhc.ca/tim17/gravite/" class="read-more">Lire la suite</a></p>
                     </div>
                 </div>
             </div>
@@ -98,11 +95,11 @@ function genere_HTML()
             <div class="flip-card no4">
                 <div class="inner-flip">
                     <div class="front-flip">
-                        <img src="https://via.placeholder.com/150" alt="Image 4" class="image">
+                        <img src="https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/SousLesFeuillesImg1.png" alt="Sous les feuilles" class="image">
                     </div>
                     <div class="flip-card-back">
-                        <h1>Carte Ici!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ...</p>
+                        <h1>Sous les feuilles</h1>
+                        <p>Sous les feuilles est une courte animation réalisée dans le cadre du cours d&#39;effets spéciaux et animation. Dans cette œuvre, un champignon est le personnage principal, qui s&#39;adonne à la pêche dans un environnement naturel. L&#39;outil Marionnette d&#39;After Effects a été utilisé pour animer le champignon de manière fluide et expressive, lui permettant de réaliser des ...<a href="https://gftnth00.mywhc.ca/tim17/sous-les-feuilles/" class="read-more">Lire la suite</a></p>
                     </div>
                 </div>
             </div>
@@ -111,11 +108,11 @@ function genere_HTML()
             <div class="flip-card no5">
                 <div class="inner-flip">
                     <div class="front-flip">
-                        <img src="https://via.placeholder.com/150" alt="Image 5" class="image">
+                        <img src="https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/AnacroniqueImg1.png" alt="Anachronique" class="image">
                     </div>
                     <div class="flip-card-back">
-                        <h1>Carte Ici!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ...</p>
+                        <h1>Anachronique</h1>
+                        <p>Anacronique est un projet d&#39;imagerie 3D réalisé dans le cadre du cours de modélisation, où l&#39;objectif était de concevoir deux véhicules pour des personnages dans un univers fictif. Ce projet, réalisé avec Autodesk Maya, se concentre sur l&#39;apprentissage de la modélisation 3D, où chaque modèle créé doit raconter une histoire à travers sa forme et ses ...<a href="https://gftnth00.mywhc.ca/tim17/anachronique/" class="read-more">Lire la suite</a></p>
                     </div>
                 </div>
             </div>
@@ -124,11 +121,11 @@ function genere_HTML()
             <div class="flip-card no6">
                 <div class="inner-flip">
                     <div class="front-flip">
-                        <img src="https://via.placeholder.com/150" alt="Image 6" class="image">
+                        <img src="https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/KamisaiImg1.png" alt="Kamisaï" class="image">
                     </div>
                     <div class="flip-card-back">
-                        <h1>Carte Ici!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ...</p>
+                        <h1>Kamisaï</h1>
+                        <p>Kamisaï est un jeu d&#39;aventure créé en équipe pour le cours de &quot;Création de jeu en équipe&quot;. Le style visuel du jeu s&#39;inspire de la peinture à l&#39;eau et des couleurs pastelles, offrant une ambiance douce et poétique. Le but du jeu est de retrouver le frère du personnage principal, enlevé mystérieusement, en accomplissant diverses ... <a href="https://gftnth00.mywhc.ca/tim17/kamisai/" class="read-more">Lire la suite</a></p>
                     </div>
                 </div>
             </div>
@@ -137,11 +134,11 @@ function genere_HTML()
             <div class="flip-card no7">
                 <div class="inner-flip">
                     <div class="front-flip">
-                        <img src="https://via.placeholder.com/150" alt="Image 7" class="image">
+                        <img src="https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/GuinodeImg1.png" alt="Guinode" class="image">
                     </div>
                     <div class="flip-card-back">
-                        <h1>Carte Ici!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ...</p>
+                        <h1>Guinode</h1>
+                        <p>Le projet est un jeu de puzzle en 2D développé avec Unity dans le cadre du cours de &quot;Création de jeu 2D&quot;. Le joueur doit déplacer des cristaux, qui servent de source d&#39;énergie, pour activer des téléporteurs permettant de se déplacer à travers les niveaux. L&#39;objectif final est d&#39;alimenter un portail qui permet de passer ...<a href="https://gftnth00.mywhc.ca/tim17/guinode/" class="read-more">Lire la suite</a></p>
                     </div>
                 </div>
             </div>
@@ -150,11 +147,11 @@ function genere_HTML()
             <div class="flip-card no8">
                 <div class="inner-flip">
                     <div class="front-flip">
-                        <img src="https://via.placeholder.com/150" alt="Image 8" class="image">
+                        <img src="https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/LeMalfaisantARouletteImg1.png" alt="Le malfaisant à roulettes" class="image">
                     </div>
                     <div class="flip-card-back">
-                        <h1>Carte Ici!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ...</p>
+                        <h1>Le malfaisant à roulettes</h1>
+                        <p>Malfaiteur à Roulette est un jeu 2D développé en JavaScript, qui sert d&#39;excellent exemple des compétences acquises au cours de la première session de TIM. Dans ce jeu, le joueur incarne un malfaiteur en fuite, poursuivi par la police sur une autoroute. L&#39;objectif est d&#39;échapper à la capture en évitant les véhicules plus lents qui encombrent ...<a href="https://gftnth00.mywhc.ca/tim17/le-malfaiteur-a-roulette/" class="read-more">Lire la suite</a></p>
                     </div>
                 </div>
             </div>
