@@ -86,7 +86,7 @@ function genere_HTML()
                     </div>
                     <div class="flip-card-back">
                         <h1>Gravité</h1>
-                        <p>Le projet est un jeu 2D développé dans le cadre du cours &quot;Création de jeu 2D&quot;, inspiré du célèbre jeu Portal. L&#39;objectif principal est de résoudre divers puzzles en contrôlant la direction de la gravité, ce qui permet de manipuler l&#39;environnement et d&#39;interagir avec les objets de manière unique pour progresser. Le jeu repose largement ...<a href="https://gftnth00.mywhc.ca/tim17/gravite/" class="read-more">Lire la suite</a></p>
+                        <p>Le projet est un jeu 2D développé dans le cadre du cours &quot;Création de jeu 2D&quot;, inspiré du célèbre jeu Portal. L&#39;objectif principal est de résoudre divers puzzles en contrôlant la direction de la gravité, ce qui permet de manipuler l&#39;environnement et d&#39;interagir avec les objets de manière unique pour progresser...<a href="https://gftnth00.mywhc.ca/tim17/gravite/" class="read-more">Lire la suite</a></p>
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@ function genere_HTML()
                     </div>
                     <div class="flip-card-back">
                         <h1>Sous les feuilles</h1>
-                        <p>Sous les feuilles est une courte animation réalisée dans le cadre du cours d&#39;effets spéciaux et animation. Dans cette œuvre, un champignon est le personnage principal, qui s&#39;adonne à la pêche dans un environnement naturel. L&#39;outil Marionnette d&#39;After Effects a été utilisé pour animer le champignon de manière fluide et expressive, lui permettant de réaliser des ...<a href="https://gftnth00.mywhc.ca/tim17/sous-les-feuilles/" class="read-more">Lire la suite</a></p>
+                        <p>Sous les feuilles est une courte animation réalisée dans le cadre du cours d&#39;effets spéciaux et animation. Dans cette œuvre, un champignon est le personnage principal, qui s&#39;adonne à la pêche dans un environnement naturel. L&#39;outil Marionnette d&#39;After Effects a été utilisé pour animer le champignon de manière fluide et expressive...<a href="https://gftnth00.mywhc.ca/tim17/sous-les-feuilles/" class="read-more">Lire la suite</a></p>
                     </div>
                 </div>
             </div>
@@ -112,7 +112,7 @@ function genere_HTML()
                     </div>
                     <div class="flip-card-back">
                         <h1>Anachronique</h1>
-                        <p>Anacronique est un projet d&#39;imagerie 3D réalisé dans le cadre du cours de modélisation, où l&#39;objectif était de concevoir deux véhicules pour des personnages dans un univers fictif. Ce projet, réalisé avec Autodesk Maya, se concentre sur l&#39;apprentissage de la modélisation 3D, où chaque modèle créé doit raconter une histoire à travers sa forme et ses ...<a href="https://gftnth00.mywhc.ca/tim17/anachronique/" class="read-more">Lire la suite</a></p>
+                        <p>Anacronique est un projet d&#39;imagerie 3D réalisé dans le cadre du cours de modélisation, où l&#39;objectif était de concevoir deux véhicules pour des personnages dans un univers fictif. Ce projet, réalisé avec Autodesk Maya, se concentre sur l&#39;apprentissage de la modélisation 3D, où chaque modèle créé doit raconter...<a href="https://gftnth00.mywhc.ca/tim17/anachronique/" class="read-more">Lire la suite</a></p>
                     </div>
                 </div>
             </div>
@@ -125,7 +125,7 @@ function genere_HTML()
                     </div>
                     <div class="flip-card-back">
                         <h1>Kamisaï</h1>
-                        <p>Kamisaï est un jeu d&#39;aventure créé en équipe pour le cours de &quot;Création de jeu en équipe&quot;. Le style visuel du jeu s&#39;inspire de la peinture à l&#39;eau et des couleurs pastelles, offrant une ambiance douce et poétique. Le but du jeu est de retrouver le frère du personnage principal, enlevé mystérieusement, en accomplissant diverses ... <a href="https://gftnth00.mywhc.ca/tim17/kamisai/" class="read-more">Lire la suite</a></p>
+                        <p>Kamisaï est un jeu d&#39;aventure créé en équipe pour le cours de &quot;Création de jeu en équipe&quot;. Le style visuel du jeu s&#39;inspire de la peinture à l&#39;eau et des couleurs pastelles, offrant une ambiance douce et poétique. Le but du jeu est de retrouver le frère du personnage principal... <a href="https://gftnth00.mywhc.ca/tim17/kamisai/" class="read-more">Lire la suite</a></p>
                     </div>
                 </div>
             </div>
@@ -151,7 +151,7 @@ function genere_HTML()
                     </div>
                     <div class="flip-card-back">
                         <h1>Le malfaisant à roulettes</h1>
-                        <p>Malfaiteur à Roulette est un jeu 2D développé en JavaScript, qui sert d&#39;excellent exemple des compétences acquises au cours de la première session de TIM. Dans ce jeu, le joueur incarne un malfaiteur en fuite, poursuivi par la police sur une autoroute. L&#39;objectif est d&#39;échapper à la capture en évitant les véhicules plus lents qui encombrent ...<a href="https://gftnth00.mywhc.ca/tim17/le-malfaiteur-a-roulette/" class="read-more">Lire la suite</a></p>
+                        <p>Malfaiteur à Roulette est un jeu 2D développé en JavaScript, qui sert d&#39;excellent exemple des compétences acquises au cours de la première session de TIM. Dans ce jeu, le joueur incarne un malfaiteur en fuite, poursuivi par la police sur une autoroute. L&#39;objectif est...<a href="https://gftnth00.mywhc.ca/tim17/le-malfaiteur-a-roulette/" class="read-more">Lire la suite</a></p>
                     </div>
                 </div>
             </div>
@@ -160,8 +160,8 @@ function genere_HTML()
 
         <div id="boutons">
             <!-- Boutons -->
-            <button class="prev">Prev</button>
-            <button class="next">Next</button>
+            <button class="prev1"><p>prev</p></button>
+            <button class="next1"><p>next</p></button>
         </div>';
     return $html;
 }

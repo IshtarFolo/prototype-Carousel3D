@@ -14,8 +14,8 @@
   align-items: center;
   flex-direction: column;
   padding-bottom: 7rem;
-  z-index: 1000;
-  scale: 1.3;
+  z-index: 5;
+  scale: 1.1;
 }
 @media screen and (min-width: 1080px) {
   .carousel {
@@ -48,46 +48,75 @@
 /* Conteneur des boutons */
 #boutons {
   position: absolute;
-  top: 67%;
   left: 50%;
+  bottom: 25rem;
   transform: translate(-50%, -50%);
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#boutons .prev {
+#boutons .prev1 {
   position: relative;
-  left: -150%;
-  bottom: 15rem;
+  width: 40%;
+  left: -5rem;
   z-index: 5;
   filter: drop-shadow(0 0 1rem yellowgreen);
   border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#boutons .prev:after {
+@media screen and (min-width: 1080px) {
+  #boutons .prev1 {
+    height: 45px;
+  }
+}
+#boutons .prev1:after {
   content: "";
   position: absolute;
   z-index: -1;
   inset: 0;
+  border-radius: inherit;
   opacity: 0.6;
   box-shadow: 0 0 1em 0.5em yellowgreen;
   border-radius: 50px;
 }
+#boutons .prev1 p {
+  color: yellowgreen;
+}
 
-#boutons .next {
+#boutons .next1 {
   position: relative;
-  left: 150%;
-  bottom: 15rem;
+  width: 40%;
+  left: 5rem;
   z-index: 5;
   filter: drop-shadow(0 0 1rem yellowgreen);
   border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#boutons .next:after {
+@media screen and (min-width: 1080px) {
+  #boutons .next1 {
+    height: 45px;
+  }
+}
+#boutons .next1:after {
   content: "";
   position: absolute;
   z-index: -1;
   inset: 0;
+  border-radius: inherit;
   opacity: 0.6;
   box-shadow: 0 0 1em 0.5em yellowgreen;
   border-radius: 50px;
+}
+#boutons .next1 p {
+  color: yellowgreen;
 }
 
 /* Les cartes */
@@ -150,6 +179,8 @@
   flex-direction: column;
   align-items: center;
   left: -1.25rem;
+  padding: 0.5rem;
+  gap: 0.5rem;
   background-color: black;
   transform: rotateY(180deg) translateX(-20px);
 }

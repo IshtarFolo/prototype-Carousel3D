@@ -3,8 +3,8 @@
  ======================================*/
  let carousel = document.querySelector('.carousel'); // Le carousel au complet
  let cartes = document.querySelectorAll('.flip-card'); // Les cartes du carousel
- const nextButton = document.querySelector('.next'); // Le bouton suivant
- const prevButton = document.querySelector('.prev'); // Le bouton précédent
+ const nextButton = document.querySelector('.next1'); // Le bouton suivant
+ const prevButton = document.querySelector('.prev1'); // Le bouton précédent
  let currentAngle = 0; // L'angle de rotation initial des cartes
  
  // Si on clique sur le bouton suivant...
@@ -24,17 +24,21 @@
  });
  
  function updateImages() {
-     cartes.forEach((carte, index) => {
-         carte.style.transform = `rotateY(${(index * 45) + currentAngle}deg) translateZ(253px)`;
-         // Add 'nonClickable' class to all cards
-         carte.classList.add('nonClickable');
-     });
- 
-     // Calculate the index of the card that is in front
-     let frontCardIndex = (Math.abs(currentAngle / 45) % cartes.length);
-     // Remove 'nonClickable' class from the card that is in front
-     cartes[frontCardIndex].classList.remove('nonClickable');
- }
+    cartes.forEach((carte, index) => {
+        carte.style.transform = `rotateY(${(index * 45) + currentAngle}deg) translateZ(253px)`;
+        // Add the 'nonClickable' class to all cards
+        carte.classList.add('nonClickable');
+    });
+
+    // Calculate the index of the card that is in front
+    let frontCardIndex = Math.round(currentAngle / 45) % cartes.length;
+    if (frontCardIndex < 0) {
+        frontCardIndex += cartes.length;
+    }
+
+    // Remove the 'nonClickable' class from the card that is in front
+    cartes[frontCardIndex].classList.remove('nonClickable');
+}
  
  function resetFlippedCards() {
      inner.forEach((carte) => {

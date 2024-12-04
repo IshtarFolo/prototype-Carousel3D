@@ -8,8 +8,8 @@
     align-items: center;
     flex-direction: column;
     padding-bottom: 7rem;
-    z-index: 1000; //Temporaire
-    scale: 1.3;
+    z-index: 5; //Temporaire
+    scale: 1.1;
 
     @media screen and (min-width: $Fullscreen) {
         scale: 1.5;
@@ -42,18 +42,29 @@
 /* Conteneur des boutons */
 #boutons {
     position: absolute;
-    top: 67%;
     left: 50%;
+    bottom: 25rem;
     transform: translate(-50%, -50%);
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  #boutons .prev {
+  #boutons .prev1 {
     position: relative;
-    left: -130%;
-    bottom: 20rem;
+    width: 40%;
+    left: -5rem;
     z-index: 5;
     filter: drop-shadow(0 0 1rem yellowgreen);
     border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @media screen and (min-width: $Fullscreen) {
+        height: 45px;
+    }
 
     &:after {
         content: '';
@@ -65,14 +76,26 @@
         box-shadow: 0 0 1em 0.5em yellowgreen;
         border-radius: 50px;
     }
+
+    p {
+        color: yellowgreen;
+    }
   }
-  #boutons .next {
+  #boutons .next1 {
     position: relative;
-    left: 130%;
-    bottom: 20rem;
+    width: 40%;
+    left: 5rem;
     z-index: 5;
     filter: drop-shadow(0 0 1rem yellowgreen);
     border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: $Fullscreen) {
+        height: 45px;
+    }
 
     &:after {
         content: '';
@@ -83,6 +106,10 @@
         opacity: 0.6;
         box-shadow: 0 0 1em 0.5em yellowgreen;
         border-radius: 50px;
+    }
+
+    p {
+        color: yellowgreen;
     }
   }
 
@@ -150,6 +177,8 @@
     flex-direction: column;
     align-items: center;
     left: -1.25rem;
+    padding: 0.5rem;
+    gap: 0.5rem;
 
     background-color: black;
     transform: rotateY(180deg) translateX(-20px);
