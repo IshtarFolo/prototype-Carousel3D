@@ -31,7 +31,7 @@
     });
 
     // Calculate the index of the card that is in front
-    let frontCardIndex = Math.round(currentAngle / 45) % cartes.length;
+    let frontCardIndex = Math.round(-currentAngle / 45) % cartes.length;
     if (frontCardIndex < 0) {
         frontCardIndex += cartes.length;
     }
