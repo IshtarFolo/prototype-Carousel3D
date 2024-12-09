@@ -160,8 +160,8 @@ function genere_HTML()
 
         <div id="boutons">
             <!-- Boutons -->
-            <button class="prev1"><p>prev</p></button>
-            <button class="next1"><p>next</p></button>
+            <button class="prev1"><p>&lt;</p></button>
+            <button class="next1"><p>&gt;</p></button>
         </div>';
     return $html;
 }
